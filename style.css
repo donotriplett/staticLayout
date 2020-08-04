@@ -1,0 +1,98 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  animation: color-change;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+h1 {
+  color: white;
+  animation: sliding;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes color-change {
+  0%,
+  100% {
+    background-color: red;
+  }
+  25% {
+    background-color: green;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: blue;
+  }
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateY(-45vh);
+  }
+  25% {
+    transform: translateX(49vw) rotate(90deg);
+  }
+  50% {
+    transform: translateY(45vh) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-49vw) rotate(-90deg);
+  }
+  100% {
+    transform: translateY(-45vh) rotate(0deg);
+  }
+}
+
+#topLeft {
+  height: 20%;
+  width: 10%;
+  border: 5px solid #ff0000;
+  border-radius: 0 0 100% 0;
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#topRight {
+  height: 20%;
+  width: 10%;
+  border: 5px solid #008000;
+  border-radius: 0 0 0 100%;
+  background-color: green;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#bottomLeft {
+  height: 20%;
+  width: 10%;
+  border: 5px solid #0000ff;
+  border-radius: 0 100% 0 0;
+  background-color: blue;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#bottomRight {
+  height: 20%;
+  width: 10%;
+  border: 5px solid #800080;
+  border-radius: 100% 0 0 0;
+  background-color: purple;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
